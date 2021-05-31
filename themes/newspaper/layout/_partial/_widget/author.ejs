@@ -1,0 +1,15 @@
+<% if (theme.author){ %>
+<!-- 个人信息 author -->
+<section class="widget-wrap author-info">
+    <img class="author-info-avatar" src="<%= theme.author.avatar %>" alt="<%= theme.author.nickname %>">
+    <h2 class="author-info-nickname"><%= theme.author.nickname %></h2>
+    <span class="author-info-bio"><%= theme.author.bio %></span>
+    <p class="author-info-txt"><%= theme.author.company %></p>
+    <p class="author-info-txt"><%= theme.author.address %></p>
+    <div class="author-info-follow">
+      <% for (var i in theme.follow){ %>
+      <a class="fa fa-<%= i %> author-info-follow-item" href="<%= theme.follow[i] %>" target="_blank"></a>
+      <% } %>
+    </div>
+</section>
+<% } %>

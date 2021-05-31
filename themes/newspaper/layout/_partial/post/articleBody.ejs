@@ -1,0 +1,21 @@
+<!-- 文章内容 article body -->
+<%
+ /* 是否处于列表页并且有文字摘要 */
+ if (post.excerpt && index){ 
+%> 
+  <article class="article-excerpt">
+    <%- post.excerpt %>
+  </article>
+  <% if (theme.excerpt_link){ %>
+    <div class="article-more-link">
+      <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+    </div>
+  <% } %> 
+<%
+  } else { 
+  /* 如果没有文字摘要或者处于详情页则展示所有文字内容 */
+%> 
+  <article class="article-content">
+    <%- post.content %> 
+  </article>
+<% } %>

@@ -1,0 +1,21 @@
+<!-- 页尾 page foot -->
+<footer id="footer">
+  <!-- copyright -->
+  <span>
+    &copy;2019-<%= date(new Date(), 'YYYY') %> <%= config.author || config.title
+    %> <%= __('powered_by') %>
+    <a href="http://hexo.io/" target="_blank">Hexo</a>
+  </span>
+  <br />
+  <!-- licensed -->
+  <span
+    >licensed
+    <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"
+      >CC BY-NC 4.0</a
+    ></span
+  >
+  <!-- go top -->
+  <a id="gotop" class="fa fa-level-up"></a>
+</footer>
+<%- js('https://unpkg.com/jquery@3.4.1/dist/jquery.js') %>
+<%- js('js/common')%>

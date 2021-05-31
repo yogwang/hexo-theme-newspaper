@@ -1,0 +1,16 @@
+<!-- 文章分类列表 archives list -->
+<div class="archives-wrap">
+<% page.posts.each(function(post, i){ %>
+  <%- partial('archive-post', {post: post}) %>
+<% }) %>
+</div>
+<!-- 列表分页 list paginator -->
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <% var prev_text = "<< " + __('prev');var next_text = __('next') + " >>"%>
+    <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text
+    }) %>
+  </nav>
+<% } %>

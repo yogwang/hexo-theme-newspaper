@@ -1,0 +1,9 @@
+<% if (site.tags.length){ %>
+<!-- 标签列表 tags list -->
+  <section class="widget-wrap shadow">
+    <h3 class="widget-title"><%= __('tags') %></h3>
+    <div class="widget">
+      <%- list_tags({show_count: true}) %>
+    </div>
+  </section>
+<% } %>

@@ -1,0 +1,80 @@
+/*
+  * @Description: 分页
+  * @Author: yogwang
+  * @Date: 2021-05-31 15:25:37
+ * @Last Modified by: yogwang
+ * @Last Modified time: 2021-05-31 15:31:05
+ */
+ 
+// 列表分页
+#page-nav {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 50px auto 5vh;
+  >* {
+    min-width: 35px;
+    height: 35px;
+    line-height: @height - 2px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    // 活动标签
+    &.current {
+      color: white;
+      background: #0e90d2;
+      border-color: @background;
+      box-shadow: 2px 2px 4px @background;
+    }
+    // 上下页
+    &.extend {
+      font-size: 12px;
+    }
+  }
+}
+// 前后文章
+#article-nav {
+  font-size: 18px;
+  margin-top: 5vh;
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  a {
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+      div {
+        transform: scale(1.2);
+      }
+    }
+  }
+  strong {
+    font-size: 16px;
+    color: green;
+    font-weight: normal;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      margin: 5px 0;
+      display: block;
+    }
+  }
+  div {
+    transition: transform .3s;
+  }
+  #article-nav-older {
+    float: right;
+    text-align: right;
+    strong {
+      color: gray;
+    }
+  }
+}

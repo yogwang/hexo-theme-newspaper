@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250.04" height="250.04" viewBox="0 0 950 950">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 165.45px;
+        font-family: zihun24hao-zhenhunshoushu;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #3f4045;
+        text-transform: uppercase;
+      }
+
+      .cls-2 {
+        font-size: 250px;
+        font-family: zihun55hao-longyinshoushu;
+      }
+    </style>
+  </defs>
+  <text id="_wang" data-name=" wang" class="cls-1" transform="translate(182.235 447.715) scale(1.813)"><tspan dy="150.063">wang</tspan></text>
+  <text id="yog" class="cls-2" transform="translate(9.642 574.84) scale(1.813)">yog</text>
+</svg>

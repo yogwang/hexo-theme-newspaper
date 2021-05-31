@@ -1,0 +1,72 @@
+// 外部容器
+/*
+ * @Description: 主体部分
+ * @Author: yogwang
+ * @Date: 2021-05-31 15:18:04
+ * @Last Modified by: yogwang
+ * @Last Modified time: 2021-05-31 16:26:05
+ */
+#wrap {
+  max-width: 1200px;
+  padding: 25px 1vw 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: inherit;
+    &:hover {
+      color: red;
+      text-decoration: underline;
+    }
+  }
+}
+// 内部容器
+#container {
+  width: calc(100% - 300px);
+  article {
+    font-size: 17px;
+    a {
+      color: inherit;
+      word-break: break-word;
+      background: linear-gradient(to bottom, transparent 70%, #d4faff 70%);
+      transition: background .4s;
+      &:before, &:after {
+        content: '';
+        display: inline;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    p {
+      line-height: 1.8;
+      code {
+        line-height: 20px;
+        color: #c7254e;
+        word-break: break-word;
+        background: #f9f2f4;
+        padding: 0 8px;
+        border-radius: 2px;
+        display: inline-block;
+      }
+    }
+    pre {
+      padding:1em;
+      margin:0.5em 0;
+      background: #f5f7ff;
+      overflow-y: hidden;
+    }
+  }
+}
+/*
+ * 适配
+ */
+@media (max-width: 970px) {
+  #wrap {
+    padding: 5vh 2vw 120px;
+    flex-wrap: wrap;
+  }
+  #container {
+    width: 100%;
+  }
+}

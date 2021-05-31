@@ -1,0 +1,14 @@
+<!-- 列表页文章卡片 list post item -->
+<div class="archive-article archive-type-<%= post.layout %>">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <div class="archive-article-header-meta">
+        <%- partial('post/tag', {class_name: 'archive-article-tag'}) %>
+        <%- partial('post/category', {class_name: 'archive-article-category'}) %>
+      </div>
+      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+    </header>
+    <%- partial('post/articleBody') %>
+    <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'YYYY/MM/DD'}) %>
+  </div>
+</div>

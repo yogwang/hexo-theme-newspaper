@@ -1,0 +1,54 @@
+# 头部导航菜单 
+# 可以自定义数量 [label:url] 的形式，尽量控制数量，移动端没有做菜单折叠
+# headerBar menu
+# custom menu example [label:url], control menu length, no menu collapse on mobile
+menu:
+  '文章': /archives
+  '我': /about
+  GitHub: 'https://github.com/yogwang' #Github链接 github link
+
+
+# 侧边栏
+# Sidebar
+widgets:
+  - author # 个人信息
+  - category # 分类展示
+  - recent_posts # 最近发布
+  - tag # 文章标签
+  - archive # 文字归档
+# - tagcloud # 标签云
+
+# 个人信息
+# userinfo
+author:
+  avatar: 'https://yogwang.site/img/userimg.jpg'
+  nickname: '陟上晴明'
+  bio: '久之须自见得'
+  company: 'ODIN.INC'
+  address: 'Jiaxing,China'
+# about
+about:
+  title: '关于我'
+  subtitle: 'YogWang'
+# 社交平台
+# social media
+follow:
+  github: 'https://github.com/yogwang'
+  weibo: 'http://weibo.com/yooooooge'
+  #facebook: 'http://weibo.com/yooooooge'
+  #twitter: 'https://twitter.com/yogwang625'
+  #instagram: 'https://www.instagram.com/yogwang625/'
+
+# 分类栏菜单
+category_menu:
+  home: '[主页](/)'
+  test: '[测试](/categories/测试/)'
+  atlas: '[图集](/categories/图集/)'
+  about: '[联系](/about/)'
+# 
+
+# 内容
+# Content
+excerpt_link: '阅读全文' # 阅读更多文字 read more text
+# show_count: true # 文章计数器 archive post count 
+

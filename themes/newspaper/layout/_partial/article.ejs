@@ -1,0 +1,28 @@
+<!-- 文章详情 Post Detail -->
+<div
+  id="<%= post.layout %>-<%= post.slug %>"
+  class="article article-type-<%= post.layout %>"
+  itemscope
+  itemprop="blogPost"
+>
+  <div class="article-inner">
+    <div class="article-meta">
+      <%- partial('post/category') %>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    </div>
+    <% if (post.link || post.title){ %>
+    <header class="article-header">
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+      <div class="article-updated">
+        <% if (post.link || post.title){ %>
+        最后更新：<time datetime="<%= date_xml(post.updated) %>" itemprop="datePublished"><%= date(post.updated, 'YYYY-MM-DD HH:mm') %></time>
+        <% } %>
+      </div>
+    </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <%- partial('post/articleBody') %>
+    </div>
+  </div>
+  <% if (!index){ %> <%- partial('post/nav') %> <% } %>
+</div>

@@ -1,0 +1,9 @@
+<% if (site.tags.length){ %>
+<!-- 标签云 tags cloud -->
+  <section class="widget-wrap shadow">
+    <h3 class="widget-title"><%= __('tagcloud') %></h3>
+    <div class="widget tagcloud">
+      <%- tagcloud() %>
+    </div>
+  </section>
+<% } %>
