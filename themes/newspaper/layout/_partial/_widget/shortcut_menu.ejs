@@ -1,0 +1,21 @@
+<% 
+  const shortcutMenu = Object.keys(theme.shortcut_menu)
+  if (shortcutMenu.length){ 
+%>
+  <!-- 分类菜单 category menu -->
+  <section class="widget-wrap shortcut-menu">
+    <% 
+      const isPost = page.categories&&page.categories.data[0]&&page.categories.data[0].name
+      for(let key of shortcutMenu){ 
+        const item = theme.shortcut_menu[key]
+        const url = md_link(item)
+        const label = md_text(item)
+        let className = 'shortcut-menu-item'
+        if(is_current(url)||label.includes(isPost)) {
+          className+=' active'
+        }
+    %>
+      <a href="<%- url -%>" class="<%- className -%>" ><%- label -%></a>
+    <% } %>
+  </section>
+<% } %>

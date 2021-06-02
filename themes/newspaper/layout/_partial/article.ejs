@@ -7,7 +7,10 @@
 >
   <div class="article-inner">
     <div class="article-meta">
-      <%- partial('post/category') %>
+      <div>
+        <%- partial('post/category') %>
+        <%- partial('post/tag') %>
+      </div>
       <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
     <% if (post.link || post.title){ %>
@@ -15,7 +18,7 @@
       <%- partial('post/title', {class_name: 'article-title'}) %>
       <div class="article-updated">
         <% if (post.link || post.title){ %>
-        最后更新：<time datetime="<%= date_xml(post.updated) %>" itemprop="datePublished"><%= date(post.updated, 'YYYY-MM-DD HH:mm') %></time>
+        <%= __('latest_update') %>：<time datetime="<%= date_xml(post.updated) %>" itemprop="datePublished"><%= date(post.updated, 'YYYY-MM-DD HH:mm') %></time>
         <% } %>
       </div>
     </header>

@@ -3,7 +3,7 @@
   <section class="widget-wrap shadow">
     <h3 class="widget-title"><%= __('archive') %></h3>
     <div class="widget">
-      <%- list_archives({show_count: theme.show_count, type: theme.archive_type}) %>
+      <%- list_archives({show_count: theme.show_count, type: theme.archive_type, format: __('date_formate')}) %>
     </div>
   </section>
 <% } %>

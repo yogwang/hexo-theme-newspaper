@@ -1,21 +1,11 @@
-<% 
-  const categoryMenu = Object.keys(theme.category_menu)
-  if (site.categories.length&&categoryMenu.length){ 
-%>
-  <!-- 分类菜单 category menu -->
-  <section class="widget-wrap category-list">
-    <% 
-      const isPost = page.categories&&page.categories.data[0]&&page.categories.data[0].name
-      for(let key of categoryMenu){ 
-        const item = theme.category_menu[key]
-        const url = md_link(item)
-        const label = md_text(item)
-        let className = 'category-list-item'
-        if(is_current(url)||label.includes(isPost)) {
-          className+=' active'
-        }
-    %>
-      <a href="<%- url -%>" class="<%- className -%>" ><%- label -%></a>
-    <% } %>
-  </section>
+<% if (site.categories.length){ %>
+<div class="widget-wrap shadow">
+  <h3 class="widget-title"><%= __('categories') %></h3>
+  <div class="widget">
+    <%- list_categories({
+      show_count: theme.show_count, 
+      orderby:'name'
+    }) %>
+  </div>
+</div>
 <% } %>

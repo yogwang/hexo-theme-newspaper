@@ -3,26 +3,24 @@
  * @Author: yogwang
  * @Date: 2021-05-31 15:30:50
  * @Last Modified by: yogwang
- * @Last Modified time: 2021-05-31 19:36:01
+ * @Last Modified time: 2021-06-02 20:11:49
  */
 #sidebar {
   width: 250px;
-  section {
-    margin-bottom: 25px;
-    ul, li {
-      line-height: 25px;
-      padding-right: .3rem;
-      margin-bottom: 0;
-    }
-  }
   // 分栏
   .widget-wrap {
     color: #222;
     padding: 10px;
     border-radius: 8px;
+    margin-bottom: 25px;
     &.shadow {
       border: 1px solid #fafafa;
       box-shadow: 3px 3px 10px #eaeaea;
+    }
+    ul, li {
+      line-height: 25px;
+      padding-right: .3rem;
+      margin: 0;
     }
     .widget {
       &-title {
@@ -34,11 +32,14 @@
       a {
         max-width: 100%;
         color: inherit;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         vertical-align: bottom;
         display: inline-block;
         overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -76,8 +77,8 @@
       }
     }
   }
-  // 分类栏
-  .category-list {
+  // 快捷菜单
+  .shortcut-menu {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -96,6 +97,19 @@
       }
     }
   }
+  // 分类栏
+  .category-list {
+    &-count {
+      margin-left: 5px;
+      &:before, &:after {
+        content: '[';
+        display: inline;
+      }
+      &:after {
+        content: ']';
+      }
+    }
+  }
   // 归档列表
   .archive-list {
     padding-left: .8em;
@@ -103,7 +117,6 @@
       display: flex;
     }
     &-count {
-      color: #666;
       margin-left: 5px;
       &:before, &:after {
         content: '[';
@@ -116,11 +129,12 @@
   }
   // 标签列表
   .tag-list {
+    line-height: 1.7em;
     padding-left: 10px;
     display: flex;
     flex-wrap: wrap;
     &-item {
-      margin-right: .6em;
+      min-width: 50%;
       display: flex;
       &:hover {
         color: #ff5722;
@@ -137,6 +151,16 @@
         content: 'x';
         display: inline;
       }
+    }
+  }
+  // 标签云
+  .tagcloud {
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    a {
+      margin: 0 3px;
     }
   }
 }

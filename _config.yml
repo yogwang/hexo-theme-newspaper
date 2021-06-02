@@ -7,9 +7,9 @@ title: Hexo
 subtitle: 'Hexo Theme Unit Test'
 description: ''
 keywords:
-author: yogwang
-language: zh-hans
-timezone: ''
+author: YogWang
+language: en
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

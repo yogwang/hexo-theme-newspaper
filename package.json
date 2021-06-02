@@ -6,7 +6,7 @@
     "version": "5.4.0"
   },
   "scripts": {
-    "dev": "hexo clean && hexo s",
+    "dev": "hexo clean && hexo s --port 4400",
     "rebuild": "hexo clean && hexo g"
   },
   "dependencies": {

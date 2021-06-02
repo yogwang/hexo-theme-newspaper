@@ -1,0 +1,18 @@
+# header 页头
+
+# body 主体
+latest_update: latest update
+read_more: Read More
+prev: Prev
+next: Next
+newer: Newer
+older: Older
+recent_posts: Recent posts
+archive: Archive
+tags: Tags
+tag_cloud: Tag Cloud
+date_formate: MMMM YYYY
+
+# Footer 页尾
+licensed: All articles in this blog are licensed under %s unless stating additionally.
+powered_by: Powered By %s

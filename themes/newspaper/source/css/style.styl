@@ -3,141 +3,68 @@
  * @Author: yogwang
  * @Date: 2019-07-09 16:41:13
  * @Last Modified by: yogwang
- * @Last Modified time: 2021-05-31 19:33:56
+ * @Last Modified time: 2021-06-02 21:08:51
  */
-@import 'common.styl';
-// 主要内容
-#container {
-  min-height: 50vh;
-  // 文章列表页
-  .archives-wrap {
-    .archive-article {
-      padding: 3vh 15px 5px;
-      border-top: 5px solid #404040;
-      // border-radius 12px
-      margin: 2vh 0 3vh;
-      // box-shadow 2px 2px 6px #ddd
-      // Tags
-      &:first-child {
-        padding-top: 15px;
-        border-top: none;
-      }
-      .archive-article-header-meta {
-        font-size: 13px;
-        color: #999;
-        display: flex;
-        justify-content: space-between;
-        .article-tag-list {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-          &::before {
-            content: 'Tags: ';
-            display: inline;
-          }
-          li {
-            display: inline;
-            &+li::before {
-              content: ',';
-              margin: 0 3px;
-              display: inline-block;
-            }
-          }
-        }
-        .article-category {
-          margin-left: auto;
-        }
-      }
-      h2[itemprop='name'] {
-        font-size: 22px;
-        font-weight: normal;
-        margin: 5px 0 25px;
-      }
-      .archive-article-date {
-        text-align: right;
-      }
-    }
-    // 查看更多
-    .article-more-link {
-      text-align: center;
-      a {
-        line-height: 40px;
-        text-decoration: none;
-        padding: 5px 0;
-        border-bottom: 1px solid currentColor;
-        transition: padding .4s;
-        &:hover {
-          padding: 5px 15px;
-        }
-      }
-    }
-  }
-  // 文章内容
-  div[class*='article-inner'] {
-    font-size: 15px;
-    li {
-      margin: 5px 0;
-    }
-    h1, h2 {
-      &[class*='article-title'] {
-        color: #222;
-      }
-    }
-    .article-meta {
-      color: #444;
-      display: flex;
-      justify-content: space-between;
-    }
-    .article-header {
-      color: #333;
-      padding: 1em 0;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 5vh;
-      .article-title {
-        font-size: 24px;
-        font-weight: normal;
-        margin-bottom: 0;
-      }
-      .article-updated {
-        font-size: 13px;
-        text-align: right;
-        color: #777;
-      }
-    }
+@import 'reset.css'; // 默认样式重置
+@import 'font_SF.css'; // 引入logo字体
+/*
+ * 全局
+ */
+html, body {
+  min-height: 100vh;
+  font-size: 13px;
+  color: #404040;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+blockquote {
+  font-family: inherit;
+  color: #222;
+  border-left-color:#d45c07
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: red;
   }
 }
-// 关于我
-#about {
-  width: 100%;
-  padding: 5vh 0;
-  .about-header {
-    h1, h3 {
-      font-size: 25px;
-      font-weight: normal;
-    }
-    h2 {
-      font-size: 35px;
-      font-weight: normal;
-      margin: 15px 0;
-    }
-    h3 {
-      color: #999;
-      margin: 0 0 15px;
-    }
+img {
+  max-width: 100%;
+}
+
+
+@import './block/header.styl'; // 页头
+@import './block/main.styl'; // 主体
+@import './block/pagination.styl'; // 分页
+@import './block/sidebar.styl'; // 侧边栏
+@import './block/footer.styl'; // 页尾
+@import './block/archives.styl'; // 文章页样式
+@import './block/about.styl'; // 关于我
+  
+::selection {
+  color: white;
+  background-color: #40bdd0;
+}
+html {
+  &::-webkit-scrollbar {
+    width: 10px;
   }
-  .article-content {
-    line-height: 35px;
-    font-size: 18px;
-    code {
-      color: #d14;
-      font-family: 'Micorsofe Yahei';
-    }
-    sub {
-      color: #666;
-    }
-    a {
-      color: inherit;
-      background: linear-gradient(to bottom, transparent 70%, rgba(49, 184, 204, .5) 70%);
-    }
+  &::-webkit-scrollbar-track-piece {
+    border: none;
+    background-color: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #4a4e50;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #313131;
+  }
+  &::-moz-selection {
+    background: #313131;
+    color: #f1f1f1;
+    text-shadow: none;
   }
 }

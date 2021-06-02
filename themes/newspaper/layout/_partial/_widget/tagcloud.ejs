@@ -1,9 +1,9 @@
 <% if (site.tags.length){ %>
-<!-- 标签云 tags cloud -->
+  <!-- 标签云 tags cloud -->
   <section class="widget-wrap shadow">
-    <h3 class="widget-title"><%= __('tagcloud') %></h3>
+    <h3 class="widget-title"><%= __('tag_cloud') %></h3>
     <div class="widget tagcloud">
-      <%- tagcloud() %>
+      <%- tagcloud({order:-1, orderby: 'random', max_font:30, color:true, start_color:'#adadad', end_color:"#000000"}) %>
     </div>
   </section>
 <% } %>

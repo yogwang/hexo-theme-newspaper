@@ -12,11 +12,12 @@ menu:
 # Sidebar
 widgets:
   - author # 个人信息
-  - category # 分类展示
+  - shortcut_menu # 快捷菜单
   - recent_posts # 最近发布
+  - category # 分类展示
   - tag # 文章标签
-  - archive # 文字归档
-# - tagcloud # 标签云
+  - archive # 文章归档
+  - tagcloud # 标签云
 
 # 个人信息
 # userinfo
@@ -40,7 +41,7 @@ follow:
   #instagram: 'https://www.instagram.com/yogwang625/'
 
 # 分类栏菜单
-category_menu:
+shortcut_menu:
   home: '[主页](/)'
   test: '[测试](/categories/测试/)'
   atlas: '[图集](/categories/图集/)'
@@ -49,6 +50,5 @@ category_menu:
 
 # 内容
 # Content
-excerpt_link: '阅读全文' # 阅读更多文字 read more text
-# show_count: true # 文章计数器 archive post count 
+show_count: true # 文章计数器 archive post count 
 
