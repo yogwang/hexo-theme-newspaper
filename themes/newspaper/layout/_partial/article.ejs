@@ -6,15 +6,15 @@
   itemprop="blogPost"
 >
   <div class="article-inner">
-    <div class="article-meta">
-      <div>
-        <%- partial('post/category') %>
-        <%- partial('post/tag') %>
-      </div>
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    </div>
     <% if (post.link || post.title){ %>
     <header class="article-header">
+      <div class="article-meta">
+        <div>
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
+        </div>
+        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      </div>
       <%- partial('post/title', {class_name: 'article-title'}) %>
       <div class="article-updated">
         <% if (post.link || post.title){ %>

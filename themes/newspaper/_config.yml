@@ -18,21 +18,19 @@ widgets:
   - tag # 文章标签
   - archive # 文章归档
   - tagcloud # 标签云
+show_count: true # 文章计数器 archive post count 
 
 # 个人信息
-# userinfo
 author:
   avatar: 'https://yogwang.site/img/userimg.jpg'
   nickname: '陟上晴明'
   bio: '久之须自见得'
   company: 'ODIN.INC'
   address: 'Jiaxing,China'
-# about
 about:
   title: '关于我'
   subtitle: 'YogWang'
 # 社交平台
-# social media
 follow:
   github: 'https://github.com/yogwang'
   weibo: 'http://weibo.com/yooooooge'
@@ -40,15 +38,10 @@ follow:
   #twitter: 'https://twitter.com/yogwang625'
   #instagram: 'https://www.instagram.com/yogwang625/'
 
-# 分类栏菜单
+# 快捷菜单 md格式的link方式
 shortcut_menu:
   home: '[主页](/)'
   test: '[测试](/categories/测试/)'
   atlas: '[图集](/categories/图集/)'
   about: '[联系](/about/)'
-# 
-
-# 内容
-# Content
-show_count: true # 文章计数器 archive post count 
 
