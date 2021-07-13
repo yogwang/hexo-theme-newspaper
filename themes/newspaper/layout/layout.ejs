@@ -1,12 +1,12 @@
 <!-- layout page -->
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="<%= config.language =>">
   <%- partial('_partial/meta') %>
   <body>
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/header', null, {cache: true}) %>
     <div id="wrap">
       <%- body %>
     </div>
-    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/footer', null, {cache: true}) %>
   </body>
 </html>

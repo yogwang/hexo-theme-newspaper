@@ -10,12 +10,12 @@
     <header class="article-header">
       <div class="article-meta">
         <div>
-          <%- partial('post/category') %>
-          <%- partial('post/tag') %>
+          <%- partial('_post/category') %>
+          <%- partial('_post/tag') %>
         </div>
-        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <%- partial('_post/date', {class_name: 'article-date', date_format: null}) %>
       </div>
-      <%- partial('post/title', {class_name: 'article-title'}) %>
+      <%- partial('_post/title', {class_name: 'article-title'}) %>
       <div class="article-updated">
         <% if (post.link || post.title){ %>
         <%= __('latest_update') %>：<time datetime="<%= date_xml(post.updated) %>" itemprop="datePublished"><%= date(post.updated, 'YYYY-MM-DD HH:mm') %></time>
@@ -24,8 +24,8 @@
     </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
-      <%- partial('post/articleBody') %>
+      <%- partial('_post/articleBody') %>
     </div>
   </div>
-  <% if (!index){ %> <%- partial('post/nav') %> <% } %>
+  <% if (!index){ %> <%- partial('_post/nav') %> <% } %>
 </div>

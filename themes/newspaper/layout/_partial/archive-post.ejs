@@ -3,12 +3,12 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
       <div class="archive-article-header-meta">
-        <%- partial('post/tag', {class_name: 'archive-article-tag'}) %>
-        <%- partial('post/category', {class_name: 'archive-article-category'}) %>
+        <%- partial('_post/tag', {class_name: 'archive-article-tag'}) %>
+        <%- partial('_post/category', {class_name: 'archive-article-category'}) %>
       </div>
-      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+      <%- partial('_post/title', {class_name: 'archive-article-title'}) %>
     </header>
-    <%- partial('post/articleBody') %>
-    <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'YYYY/MM/DD'}) %>
+    <%- partial('_post/articleBody') %>
+    <%- partial('_post/date', {class_name: 'archive-article-date', date_format: 'YYYY/MM/DD'}) %>
   </div>
 </div>
