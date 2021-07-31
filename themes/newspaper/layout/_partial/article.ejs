@@ -17,15 +17,32 @@
       </div>
       <%- partial('_post/title', {class_name: 'article-title'}) %>
       <div class="article-updated">
-        <% if (post.link || post.title){ %>
+        <% if (post.update){ %>
         <%= __('latest_update') %>：<time datetime="<%= date_xml(post.updated) %>" itemprop="datePublished"><%= date(post.updated, 'YYYY-MM-DD HH:mm') %></time>
         <% } %>
       </div>
     </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
+      <div id="expired-tag"></div>
       <%- partial('_post/articleBody') %>
     </div>
   </div>
   <% if (!index){ %> <%- partial('_post/nav') %> <% } %>
 </div>
+<%
+const categories = post.categories.map(item=>item.name)
+const showExpired = categories.some(text=>theme.showExpired.includes(text))
+if(showExpired){
+%>
+<script>
+const postDate = "<%= moment(post.update||post.date).format('YYYY-MM-DD') %>"
+const difference = moment().diff(postDate, 'days')
+const isExpired = difference > 1400
+if (isExpired){
+  const el = document.querySelector("#expired-tag")
+  let expiredText = `此文章发布于 ${difference} 天前，其中的信息可能已经有所发展或是发生改变，请自行斟酌确认。`
+  el.innerHTML = expiredText
+} 
+</script>
+<% } %>

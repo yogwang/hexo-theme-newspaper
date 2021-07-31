@@ -92,7 +92,7 @@
     color: #333;
     padding: 1em 0;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
     .article-title {
       font-size: 24px;
       font-weight: normal;
@@ -104,6 +104,44 @@
       font-size: 13px;
       text-align: right;
       color: #777;
+    }
+  }
+  .article-entry {
+    position: relative;
+    #expired-tag {
+      min-height: 35px;
+      line-height: @min-height;
+      color: #7d6970;
+      background: rgba(pink, .2);
+      padding: 0 10px;
+      border-radius: 5px;
+      margin-bottom:2vh;
+      &:empty{
+        display: none;  
+      }
+    }
+  }
+  .article-content {
+    table {
+      thead {
+        color: white;
+        background: #333333;
+        tr {
+          height: 50px;
+          th {
+            padding: 0 15px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 50px;
+          border-bottom: 1px solid #333;
+          td {
+            padding: 0 15px;
+          }
+        }
+      }
     }
   }
 }

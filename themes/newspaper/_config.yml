@@ -30,6 +30,7 @@ author:
 about:
   title: '关于我'
   subtitle: 'YogWang'
+
 # 社交平台
 follow:
   github: 'https://github.com/yogwang'
@@ -45,3 +46,6 @@ shortcut_menu:
   atlas: '[图集](/categories/图集/)'
   about: '[联系](/about/)'
 
+# 展示过期提示Tag 键入需要展示过期标签的分类名称
+showExpired:
+  - 测试
