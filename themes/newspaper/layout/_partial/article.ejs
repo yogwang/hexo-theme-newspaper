@@ -38,10 +38,10 @@ if(showExpired){
 <script>
 const postDate = "<%= moment(post.update||post.date).format('YYYY-MM-DD') %>"
 const difference = moment().diff(postDate, 'days')
-const isExpired = difference > 1400
+const isExpired = difference > 300
 if (isExpired){
   const el = document.querySelector("#expired-tag")
-  let expiredText = `此文章发布于 ${difference} 天前，其中的信息可能已经有所发展或是发生改变，请自行斟酌确认。`
+  let expiredText = `此文章更新于 ${difference} 天前，其中的信息可能已经有所发展或是发生改变，请自行斟酌确认。`
   el.innerHTML = expiredText
 } 
 </script>
