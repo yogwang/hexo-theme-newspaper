@@ -4,13 +4,25 @@
 %>
 <nav id="article-nav">
   <% if (post.prev){ %>
-    <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap">
+    <a 
+      id="article-nav-newer"
+      class="article-nav-link-wrap" 
+      href="<%- url_for(post.prev.path) %>" 
+      title="<%= post.prev.title || '(no title)' %>" 
+      alt="<%= post.prev.title || '(no title)' %>"
+    >
       <strong class="article-nav-caption"><%= __('newer') %></strong>
       <div class="article-nav-title"><%= post.prev.title || '(no title)' %></div>
     </a>
   <% } %>
   <% if (post.next){ %>
-    <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap">
+    <a 
+      id="article-nav-older"
+      class="article-nav-link-wrap" 
+      href="<%- url_for(post.next.path) %>" 
+      title="<%= post.next.title || '(no title)' %>" 
+      alt="<%= post.next.title || '(no title)' %>"
+    >
       <strong class="article-nav-caption"><%= __('older') %></strong>
       <div class="article-nav-title"><%= post.next.title || '(no title)' %></div>
     </a>
